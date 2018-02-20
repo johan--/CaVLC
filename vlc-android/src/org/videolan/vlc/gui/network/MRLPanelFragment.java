@@ -71,6 +71,9 @@ public class MRLPanelFragment extends DialogFragment implements View.OnKeyListen
     public void onStart() {
         super.onStart();
         updateHistory();
+
+        // Misho Bypass IPTV URL entry!
+        processUri();
     }
 
     @Override

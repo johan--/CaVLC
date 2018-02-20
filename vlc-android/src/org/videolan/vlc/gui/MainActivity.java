@@ -244,6 +244,13 @@ public class MainActivity extends ContentActivity implements FilterQueryProvider
         mNavigationView.setNavigationItemSelectedListener(this);
         if (BuildConfig.DEBUG)
             createExtensionServiceConnection();
+
+        // Misho
+        if (mDrawerLayout.isDrawerOpen(mNavigationView)) {
+            mDrawerLayout.closeDrawer(mNavigationView);
+        }
+        new MRLPanelFragment().show(getSupportFragmentManager(), "fragment_mrl");
+
 //        mActivityHandler.post(new Runnable() {
 //            @Override
 //            public void run() {
